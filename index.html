@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My DUDU 🥺❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --pink:#ff7aa2;
+  --rose:#ffd1dc;
+  --lavender:#f3e8ff;
+  --text:#3b2f36;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+
+body{
+  font-family:'Georgia', serif;
+  background: linear-gradient(180deg, var(--lavender), var(--rose));
+  overflow-x:hidden;
+  position:relative;
+  color:var(--text);
+}
+
+#emojis{
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  pointer-events:none;
+  z-index:0;
+}
+
+.emoji{
+  position:absolute;
+  font-size:20px;
+  opacity:0.8;
+  animation:floatUp linear infinite;
+  will-change: transform;
+}
+
+@keyframes floatUp{
+  0%{transform:translateY(100vh) rotate(0deg) scale(0.8); opacity:0;}
+  10%{opacity:1;}
+  100%{transform:translateY(-10vh) rotate(360deg) scale(1.3); opacity:0;}
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:50px 20px;
+  position:relative;
+  z-index:1;
+}
+
+.card{
+  max-width:720px;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(16px);
+  padding:50px;
+  border-radius:35px;
+  box-shadow:0 30px 70px rgba(0,0,0,0.25);
+  animation:fadeUp 1.8s ease;
+  text-align:center;
+}
+
+h1,h2{
+  margin-bottom:25px;
+}
+
+p{
+  font-size:19px;
+  line-height:2.1;
+  text-align:center;
+}
+
+button{
+  margin-top:40px;
+  padding:16px 38px;
+  border:none;
+  border-radius:45px;
+  background:linear-gradient(135deg,var(--pink),#ff4f81);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 14px 28px rgba(255,79,129,0.4);
+  transition:0.3s;
+}
+button:hover{
+  transform:scale(1.09);
+}
+
+.hidden{display:none;}
+
+.big-heart{
+  font-size:64px;
+  margin-top:25px;
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.45);}
+  100%{transform:scale(1);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(60px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+<body>
+
+<audio id="music" loop preload="auto">
+  <source src="perfect.mp3" type="audio/mpeg">
+</audio>
+
+<div id="emojis"></div>
+
+<!-- SECTION 1 -->
+<section>
+  <div class="card">
+    <h1>Hey My DUDU 🥺❤️</h1>
+    <p>
+      I wanted to create something magical for you 💗, where my heart could speak freely  
+      through words, emojis, and little sparks of love. Every thought, every heartbeat, every  
+      memory we’ve shared flows into these words a small gift to show how deeply I love you.
+    </p>
+    <button onclick="start()">Begin 💕</button>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section id="s2" class="hidden">
+  <div class="card">
+    <h2>Happy Anniversary 🥰</h2>
+    <p>
+      I love you more than words could ever hope to explain 💖.  
+      From the very first moment you entered my life, everything became brighter, warmer, and full of meaning.  
+      You stayed with me through every smile and every storm 🤍, holding my hand even when the path was unclear,  
+      believing in us when I doubted myself. Every little thing you do, every laugh, every glance,  
+      makes my heart overflow with gratitude and love 🫶.  
+      I am endlessly thankful to have you, my DUDU, my love, my home.
+    </p>
+    <div class="big-heart">❤️</div>
+    <button onclick="next('s3')">Slowly… 😌</button>
+  </div>
+</section>
+
+<!-- SECTION 3 -->
+<section id="s3" class="hidden">
+  <div class="card">
+    <h2>What I Love Most About You 💫</h2>
+    <p>
+      There’s one thing that always leaves me breathless: the way you laugh with your whole heart 😄💞.  
+      Every time you laugh, it’s as if the world softens around us, and nothing else matters except this perfect moment.  
+      That laugh, that pure joy in your eyes, makes me fall for you again and again.  
+      I wish I could bottle those moments, DUDU, and carry them in my heart forever 🫶.  
+      You don’t even realize how magical you are  but I do,every single day.
+    </p>
+    <button onclick="next('s4')">Keep reading 💗</button>
+  </div>
+</section>
+
+<!-- SECTION 4 -->
+<section id="s4" class="hidden">
+  <div class="card">
+    <h2>29 December 🕊️</h2>
+    <p>
+      Two years have passed, and I cherish every single second ⏳.  
+      I know you might say dates don’t matter much, but for me, this day is unforgettable.  
+      It was the day I chose you, the day I took a decision that changed my life in the most beautiful way ❤️.  
+      Every challenge, every doubt, every fear it all became worth it because I chose you.  
+      I love you the most, and celebrating this day is my way of showing how grateful I am to have you.
+    </p>
+    <button onclick="next('s5')">Last page 🥺</button>
+  </div>
+</section>
+
+<!-- SECTION 5 -->
+<section id="s5" class="hidden">
+  <div class="card">
+    <h2>Always You 💌</h2>
+    <p>
+      Loving you hasn’t always been simple, yet it has always been worth it 💖.  
+      Through every uncertainty, every distance, every silent moment — my heart has chosen you over and over again.  
+      You are my everything, my endless smile, my constant thought, my forever companion 🫶.  
+      I’ll keep choosing you every day, DUDU, for as long as I live.  
+      I LOVE YOUUUU bbyyyy ❤️🥰
+    </p>
+  </div>
+</section>
+
+<script>
+function start(){
+  const music=document.getElementById("music");
+  music.volume=0.6;
+  music.play().catch(()=>{document.addEventListener("click",()=>music.play(),{once:true});});
+  next('s2');
+  generateFloatingEmojis();
+  enableCursorFollow();
+}
+
+function next(id){
+  document.getElementById(id).classList.remove("hidden");
+  window.scrollTo({top:document.getElementById(id).offsetTop, behavior:'smooth'});
+  generateEmojiShower();
+}
+
+// continuous floating emojis
+function generateFloatingEmojis(){
+  const container=document.getElementById("emojis");
+  const symbols=['❤️','💖','💗','💞','✨','💫','💕'];
+  for(let i=0;i<120;i++){
+    const span=document.createElement('span');
+    span.className='emoji';
+    span.innerText=symbols[Math.floor(Math.random()*symbols.length)];
+    span.style.left=Math.random()*100+'vw';
+    span.style.fontSize=(14+Math.random()*24)+'px';
+    span.style.animationDuration=(8+Math.random()*6)+'s';
+    span.style.animationDelay=(Math.random()*10)+'s';
+    container.appendChild(span);
+  }
+}
+
+// burst on button click
+function generateEmojiShower(){
+  const container=document.getElementById("emojis");
+  const symbols=['❤️','💖','💗','💞','✨','💫','💕'];
+  for(let i=0;i<30;i++){
+    const span=document.createElement('span');
+    span.className='emoji';
+    span.innerText=symbols[Math.floor(Math.random()*symbols.length)];
+    span.style.left=Math.random()*100+'vw';
+    span.style.top=Math.random()*100+'vh';
+    span.style.fontSize=(16+Math.random()*22)+'px';
+    span.style.animationDuration=(2+Math.random()*2)+'s';
+    container.appendChild(span);
+    setTimeout(()=>{span.remove()},4000);
+  }
+}
+
+// emojis follow finger for iPhone 14
+function enableCursorFollow(){
+  const container=document.getElementById("emojis");
+  document.addEventListener('touchmove', e=>{
+    const symbols=['❤️','💖','💗','💞','✨','💫','💕'];
+    const touch = e.touches[0];
+    const span=document.createElement('span');
+    span.className='emoji';
+    span.innerText=symbols[Math.floor(Math.random()*symbols.length)];
+    span.style.left=touch.clientX+'px';
+    span.style.top=touch.clientY+'px';
+    span.style.fontSize=(16+Math.random()*22)+'px';
+    span.style.animationDuration='2s';
+    container.appendChild(span);
+    setTimeout(()=>{span.remove()},2000);
+  });
+}
+</script>
+
+</body>
+</html>
